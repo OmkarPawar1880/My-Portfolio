@@ -149,6 +149,77 @@
     display: none;
   }
 }
+/* ================= HAMBURGER ================= */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  justify-self: end;
+}
+
+.hamburger span {
+  width: 24px;
+  height: 2px;
+  background: var(--text-primary);
+  transition: all 0.35s ease;
+}
+
+/* Active state */
+.hamburger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ================= MOBILE MENU ================= */
+.mobile-menu {
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
+  background: var(--bg-primary);
+  border-bottom: 1px solid rgba(27, 24, 21, 0.12);
+
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+
+  padding: 0 6vw;
+}
+
+.mobile-menu a {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+/* MOBILE ACTIONS */
+.mobile-actions {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .header-actions {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
 
 /* ---------- HERO SECTION ---------- */
 .hero {
