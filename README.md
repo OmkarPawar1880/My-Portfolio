@@ -1,16 +1,82 @@
-# React + Vite
+# 🚀 My Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive **developer portfolio website** built with **React.js**, **GSAP**, and **CSS**, showcasing projects, skills, services, and contact information with smooth animations and a premium UI.
 
-Currently, two official plugins are available:
+Designed to be clean, fast, and conversion-focused — perfect for personal branding and freelancing.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Modern Hero section with GSAP intro animations  
+- Smooth scroll-based reveal animations (GSAP + ScrollTrigger)  
+- Clean & minimal UI with dark theme aesthetics  
+- Fully responsive (Desktop • Tablet • Mobile)  
+- Projects showcase with live & GitHub links  
+- Services & pricing section  
+- Testimonials / social proof  
+- Contact & Call-To-Action section  
+- Minimal footer with social links  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+- **React.js**
+- **GSAP (GreenSock Animation Platform)**
+- **CSS3 (External CSS, no UI libraries)**
+- **JavaScript (ES6+)**
+- **React Hooks**
+- **Git & GitHub**
+
+---
+
+## 📁 Project Directory Structure
+```bash
+My-Portfolio/
+│
+├── public/
+│ ├── index.html
+│ └── favicon.ico
+│
+├── src/
+│ ├── assets/
+│ │ ├── images/
+│ │ └── videos/
+│ │
+│ ├── Components/
+│ │ ├── Header.jsx
+│ │ ├── Hero.jsx
+│ │ ├── About.jsx
+│ │ ├── Skills.jsx
+│ │ ├── Portfolio.jsx
+│ │ ├── Services.jsx
+│ │ ├── Testimonials.jsx
+│ │ ├── CallToAction.jsx
+│ │ └── Footer.jsx
+│ │
+│ ├── App.jsx
+│ ├── App.css
+│ ├── index.js
+│ └── index.css
+│
+├── .gitignore
+├── package.json
+├── package-lock.json
+└── README.md
+```
+
+---
+
+## ⚙️ Installation & Setup
+
+Clone the repository:
+```bash
+git clone https://github.com/OmkarPawar1880/My-Portfolio.git
+```
+```bash
+cd My-Portfolio
+npm install
+npm run dev
+```
+
