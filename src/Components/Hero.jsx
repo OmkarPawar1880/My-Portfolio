@@ -80,11 +80,11 @@ const Hero = () => {
         </p>
 
         <div className="hero__cta" ref={ctaRef}>
-          <a href="#work" className="btn btn--primary">
+          <a href="#projects" className="btn btn--primary">
             View Work
           </a>
           <a href="#contact" className="btn btn--secondary">
-            Hire Me
+            Contact Me
           </a>
         </div>
       </div>

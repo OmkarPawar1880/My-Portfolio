@@ -30,23 +30,15 @@ const About = () => {
   }, []);
 
   return (
-    <section className="about" ref={sectionRef}>
+    <section className="about" id="about" ref={sectionRef}>
       <div className="about-container">
         <h2 ref={(el) => (itemsRef.current[0] = el)}>About Me</h2>
 
         <p ref={(el) => (itemsRef.current[1] = el)}>
-          I focus on clean UI, smooth interactions, and performance-first
-          development.
+         I’m a Bachelor’s degree student passionate about software development and modern web technologies. I enjoy building clean, functional applications and continuously improving my skills across frontend, backend, and problem-solving. I’m focused on learning, experimenting, and growing into a well-rounded developer.
         </p>
 
-        <p ref={(el) => (itemsRef.current[2] = el)}>
-          I enjoy building calm, modern interfaces that feel effortless to use.
-        </p>
-
-        <p ref={(el) => (itemsRef.current[3] = el)}>
-          I love working with founders and creators who value clarity,
-          simplicity, and good design.
-        </p>
+       
       </div>
     </section>
   );

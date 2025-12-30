@@ -30,7 +30,7 @@ const ContactCTA = () => {
   }, []);
 
   return (
-    <section className="contact-cta" ref={sectionRef}>
+    <section className="contact-cta" id="contact" ref={sectionRef}>
       <div className="contact-container">
         {/* Heading */}
         <h2 ref={(el) => (itemsRef.current[0] = el)}>

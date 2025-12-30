@@ -1,4 +1,5 @@
 import React, { useLayoutEffect, useRef } from "react";
+
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -6,35 +7,35 @@ gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   {
+    year: "2025",
     title: "Cinematic Portfolio Website",
     problem:
       "Client needed a premium portfolio to showcase photography with immersive visuals and smooth storytelling.",
     tech: ["React", "GSAP", "CSS3"],
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
     live: "#",
     github: "#",
   },
   {
+    year: "2025",
     title: "Coffee Shop Landing Page",
     problem:
       "Local café wanted a modern website to attract customers and increase walk-ins.",
     tech: ["React", "GSAP", "Responsive Design"],
-    image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93",
     live: "#",
     github: "#",
   },
   {
+    year: "2025",
     title: "Developer Portfolio",
     problem:
       "Needed a clean, fast, and animated personal portfolio to convert visitors into leads.",
     tech: ["React", "GSAP", "Modern UI"],
-    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97",
     live: "#",
     github: "#",
   },
 ];
 
-const Projects = () => {
+const FeaturedProject = () => {
   const sectionRef = useRef(null);
   const cardsRef = useRef([]);
 
@@ -49,7 +50,6 @@ const Projects = () => {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top 70%",
-          toggleActions: "play none none none",
           once: true,
         },
       });
@@ -59,7 +59,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <section className="projects" ref={sectionRef}>
+    <section className="projects" id="projects" ref={sectionRef}>
       <div className="projects-container">
         <div className="projects-header">
           <h2>Selected Projects</h2>
@@ -68,38 +68,48 @@ const Projects = () => {
 
         <div className="projects-grid">
           {projects.map((project, index) => (
-            <div
+            <article
               className="project-card"
               key={index}
               ref={(el) => (cardsRef.current[index] = el)}
             >
-              <div className="project-image">
-                <img src={project.image} alt={project.title} />
+              {/* YEAR */}
+              <span className="project-year">{project.year}</span>
+
+              {/* TITLE */}
+              <h3 className="project-title">{project.title}</h3>
+
+              {/* DESCRIPTION */}
+              <p className="project-description">{project.problem}</p>
+
+              {/* TECH STACK */}
+              <div className="project-tech">
+                {project.tech.map((t, i) => (
+                  <span key={i}>{t}</span>
+                ))}
               </div>
 
-              <div className="project-content">
-                <h3>{project.title}</h3>
+              {/* ACTIONS */}
+              <div className="project-actions">
+                <a
+                  href={project.github}
+                  className="btn-outline"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  View Project <span>↗</span>
+                </a>
 
-                <p className="project-problem">
-                  <strong>Problem:</strong> {project.problem}
-                </p>
-
-                <div className="project-tech">
-                  {project.tech.map((t, i) => (
-                    <span key={i}>{t}</span>
-                  ))}
-                </div>
-
-                <div className="project-links">
-                  <a href={project.live} target="_blank" rel="noreferrer">
-                    Live
-                  </a>
-                  <a href={project.github} target="_blank" rel="noreferrer">
-                    GitHub
-                  </a>
-                </div>
+                <a
+                  href={project.live}
+                  className="btn-solid"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Demo <span>↗</span>
+                </a>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>
@@ -107,4 +117,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default FeaturedProject;
